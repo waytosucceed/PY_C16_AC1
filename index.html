@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sorting a Dictionary</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="header">
+    <img src="./logo/Logo.png" alt="Logo" class="logo" />
+    <img src="./logo/header.png" alt="Header" class="header-image" />
+  </header>
+
+  <div class="container mt-5">
+    <h1 class="text-center">SORTING DICTIONARY</h1>
+    <p class="text-center">Click on each topic to learn more.</p>
+
+    <div class="row">
+        <div>
+            <button class="btn btn-custom btn-block" data-toggle="modal" data-target="#dictionarySortModal">
+                Sort Dictionary
+            </button>
+        </div>
+  </div>
+  
+
+
+    <!-- Modals -->
+
+    
+    <div class="modal fade" id="dictionarySortModal" tabindex="-1" aria-labelledby="dictionarySortLabel" aria-hidden="true">
+        <div class="modal-dialog custom-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="dictionarySortLabel">Sorting a Dictionary</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="content-container">
+                        <div class="text-content">
+                            <p style="font-size: 1.5rem;">
+                                Have you ever wondered how we can sort the values in a dictionary? <br><br>
+                                It can be a bit tricky since dictionaries don’t store items in any specific order. Let’s see what happens when you use the <code>sorted()</code> function to sort the values. <br><br>
+                                We are using the <code>sorted()</code> function since the <code>sort()</code> method only works on a list. <br><br>The <code>sorted()</code> function works on any iterable. <br><br>
+                                We have a dictionary with keys as fruit names and values as quantity. Let’s say we want to sort the dictionary based on the quantity of fruits.
+                            </p>
+                            <br><img src="./images/image11.png" alt="" width="35%"><br><br>
+                            <p style="font-size: 1.5rem;">
+                                We got a sorted list of fruit names, sorted in alphabetical order, but we wanted to sort by quantity (values) and not by names (keys). <br><br>
+                                The <code>sorted()</code> function sorts the keys of the dictionary, not the values. <br><br>To sort based on quantity (values), we need to modify our approach.
+                            </p>
+                            <br>
+                            <p style="font-size: 1.5rem;">
+                                We will use the <code>sort()</code> method. <br><br>The <code>sort()</code> method can take an optional argument called <code>key</code>. The key is a function that provides a way to customize the sorting logic. <br><br>
+                                The <code>sort()</code> method will use the key function to figure out how to compare each item. <br><br>So basically, you can tell Python to sort based on some custom criteria. <br><br>
+                                Let’s say you have a list of words and you want the list to be sorted by the number of letters in each word. You can do it like so:
+                            </p>
+                            <br><img src="./images/image13.png" alt="" width="35%"><br><br>
+                            <p style="font-size: 1.5rem;">
+                                Here, we used the <code>len</code> function as the key function, so <code>sort()</code> arranged the words in order of their length.<br><br> The key function allows us to extract some property of the items in the list to sort by. In this case, the length of each word.
+                            </p>
+                            <p style="font-size: 1.5rem;">
+                                Now coming back to our dictionary of fruits, we will use a similar approach to sort by the quantity of fruits. <br><br>
+                                Firstly, we will loop through the dictionary and create a list of tuples where each tuple contains the fruit name (key) and its quantity (value).
+                            </p>
+                            <br><img src="./images/image12.png" alt="" width="35%"><br><br>
+                            <p style="font-size: 1.5rem;">
+                                Then, we will define a helper function that tells Python to sort the list by the second element in the tuple (the quantity). <br><br>
+                                <img src="./images/image15.png" alt="" width="35%"><br><br>
+                                Finally, we will call <code>sort()</code> to sort the list in descending order. Here, <code>key=get_second_element</code> tells <code>sort()</code> to use the second element of each tuple to sort the list, and <code>reverse=True</code> sorts the list in descending order.
+                            </p>
+                            <br><img src="./images/image14.png" alt="" width="40%"><br><br>
+                            <!-- <p style="font-size: 1.5rem;">
+                                Let’s do a small challenge to see if you can sort the dictionary according to the values in it.
+                            </p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+  
+
+
+  <div class="modal fade" id="definingFunctionModal" tabindex="-1" aria-labelledby="definingFunctionLabel" aria-hidden="true">
+    <div class="modal-dialog custom-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="definingFunctionLabel">Defining a Function</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="content-container">
+                    <div class="text-content">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<div class="modal fade" id="callingFunctionModal" tabindex="-1" aria-labelledby="callingFunctionLabel" aria-hidden="true">
+  <div class="modal-dialog custom-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="callingFunctionLabel">Calling a Function</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <div class="content-container">
+                  <div class="text-content">
+                      <p style="font-size: 1.5rem;">
+                          To <b>call a function</b>, you need to mention the name and give round brackets. <br>
+                          <img class="modal-img" src="./images/image14.png" alt="sc" style="width: 100%; max-width: 300px" />
+<br>
+                          That’s it!
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="modal fade" id="reusingCodeModal" tabindex="-1" aria-labelledby="reusingCodeLabel" aria-hidden="true">
+  <div class="modal-dialog custom-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="reusingCodeLabel">Reusing Code</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <div class="content-container">
+                  <div class="text-content">
+                      <p style="font-size: 1.5rem;">
+                          In one of our past classes, we learned about the concept of DRY. Do you remember it? <br><br>
+                         <b>DRY</b> stands for <b>D</b>on’t <b>R</b>epeat <b>Y</b>ourself.
+                      </p>
+                      <br>
+                      <p style="font-size: 1.5rem;">
+                        Will functions help us in reusing code? 
+                        <br><br>It does. It may not look like in the program that we are writing now but, as you start writing more complex programs like for creating games, reusing code becomes very useful.
+                        
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="modal fade" id="parametersArgumentsModal" tabindex="-1" aria-labelledby="parametersArgumentsLabel" aria-hidden="true">
+  <div class="modal-dialog custom-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="parametersArgumentsLabel">Parameters and Arguments</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <div class="content-container">
+                  <div class="text-content">
+                      <p>
+                          A <b>parameter</b> is the variable listed inside the parentheses in the <b>function definition.</b> <br>
+                          Let’s see and understand with an example.
+                      </p>
+                      
+                      <br>
+                      <img class="modal-img" src="./images/image2.png" alt="sc" style="width: 100%; max-width: 500px" /> <br>
+
+                      <p>
+                          You can have as many parameters as you want. 
+                          <br>
+                          <br> An <b>argument</b> is the value that is sent to the function when it is <b>called</b>.
+                      </p>
+                      
+                      <img class="modal-img" src="./images/image4.png" alt="sc" style="width: 100%; max-width: 300px" /> <br>
+
+                      <p>
+                          You can have as many <b>parameters and arguments</b> as you want. Just make sure the number of parameters in the function <b>definition matches</b> with the number of <b>arguments</b> in the function <b>call</b>.
+                      </p>
+                      
+                      <img class="modal-img" src="./images/image3.png" alt="sc" style="width: 100%; max-width: 500px" /> <br>
+                      
+                      <img class="modal-img" src="./images/image6.png" alt="sc" style="width: 100%; max-width: 500px" /> <br>
+
+                      <p>
+                        The order of parameters and arguments is very important, it means if you have mentioned <code>brush_color</code> as the first parameter in <code>brush_teeth</code>, you cannot pass the <code>paste_brand</code> first unless you want incorrect results.
+                      </p>
+                      
+                      <img class="modal-img" src="./images/image5.png" alt="sc" style="width: 100%; max-width: 400px" /> <br>
+                      <img class="modal-img" src="./images/1.png" alt="sc" style="width: 100%; max-width: 400px" /> <br>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="modal fade" id="returningValuesModal" tabindex="-1" aria-labelledby="returningValuesLabel" aria-hidden="true">
+  <div class="modal-dialog custom-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="returningValuesLabel">Returning Values</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <div class="content-container">
+                  <div class="text-content">
+                      <p>
+                          The return statement ends the function and tells it to send a value back to the part of the program that called it. 
+                          It allows a function to produce a result that can be used elsewhere in the program.
+                      </p>
+
+                      <div style="display: flex; gap: 1rem;">
+                      <img class="modal-img" src="./images/image1.png" alt="sc" style="width: 100%; max-width: 350px" /> <br>
+
+                      <p style="width: 50%;">
+                          Imagine you order groceries from an online grocery store. You expect the store to deliver the order to you. <br>
+                          If they just prepare it but never deliver it, you don't get the order you paid for. <br> <br>
+                          The return statement is like the delivery of the order. The function does some work (prepares the order) and then returns the result (delivers the order) back to you.
+
+                      </p>
+                    
+                    
+                    </div>
+                      <p>
+                          You can also write the same function in the following way: 
+                          <br>
+                          <img class="modal-img" src="./images/image7.png" alt="sc" style="width: 100%; max-width: 300px" /> <br>
+    
+                          You can store the value returned in a variable too!
+                      </p>
+                      
+                      <img class="modal-img" src="./images/image11.png" alt="sc" style="width: 100%; max-width: 500px" /> <br>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="modal fade" id="recursionModal" tabindex="-1" aria-labelledby="recursionLabel" aria-hidden="true">
+    <div class="modal-dialog custom-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="recursionLabel">Recursion</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="content-container">
+                    <div class="text-content">
+                        <p style="font-size: 1.5rem;">
+                            <b>Recursion</b> is a process where a function calls itself. <br><br>
+                            You need to be careful when you use recursion; otherwise, you may enter into an infinite loop! <br><br>
+                            Let’s see what recursion in Python looks like:
+                        </p>
+                       <img src="./images/2.png" alt=""><br>
+                       <img src="images/3.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
